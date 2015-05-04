@@ -1,0 +1,84 @@
+<ion-view view-title="Food/Drinks Menu">
+  <ion-content>
+    <ion-list>
+		<div class="list list-inset">
+  <div>
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-coffee"></i>
+    Breakfast
+  </a>
+  <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isBreakfastCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
+        <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
+        <h2>{{food.name | uppercase}}</h2>
+        
+        <i class="icon ion-chevron-right icon-accessory"></i>
+  </div>
+  
+  <div>
+    <a class="item item-icon-left" href="#">
+    <i class="icon ion-pizza"></i>
+    Lunch
+  </a>
+  <ion-item class="item-remove-animate item-avatar item-icon-right"  ng-repeat="food in foods | filter : {isLunchCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
+        <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
+        <h2>{{food.name | uppercase}}</h2>
+        
+        <i class="icon ion-chevron-right icon-accessory"></i>
+		
+		</div>
+<div>
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-ios-nutrition"></i>
+	
+    Dinner
+  </a>
+
+  <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isDinnerCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
+        <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
+        <h2>{{food.name | uppercase}}</h2>
+        
+        <i class="icon ion-chevron-right icon-accessory"></i>
+		
+		</div>
+  
+  <div>
+  
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-icecream"></i>
+    Snack
+    
+  </a>
+  
+  <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isSnackCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
+        <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
+        <h2>{{food.name | uppercase}}</h2>
+        
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+</div>
+
+
+<div>
+  
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-wineglass"></i>
+    Drinks
+    
+  </a>
+  
+  <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isDrinkCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
+        <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
+        <h2>{{food.name | uppercase}}</h2>
+        
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+</div>
+
+
+
+  </div>
+ 
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

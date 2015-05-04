@@ -1,0 +1,32 @@
+<!--
+  This template loads for the 'tab.food-list' state (app.js)
+  'food' is a $scope variable created in the FoodCtrl controller (controllers.js)
+  The FoodCtrl pulls data from the data service (data.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{food.name}}">
+  <ion-content class="padding">
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="{{food.icon}}">
+	<div>
+	<!-- ***This is where I intended to add selected Food Group to increment 
+	        Calorie Counter on tab-home.html but keep getting NaN error! ***  
+	<button class="button button-dark" var = onclick="incDec('+{{food.calories}}')">
+  button-dark
+</button>-->
+</div>
+    <h2>BurnBaby Calories Score:</h2><h1>{{food.calories}}</h1>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="{{food.image}}">
+    <p>
+      {{food.Description}}
+    </p>
+  </div>
+  
+	
+  </ion-content>
+</ion-view>
