@@ -1,59 +1,76 @@
+<!-- Page to display food objects in a list where uses can view calorie details about food category
+It was intended that once an object is selected that they would be able to add the object which would
+increment the Calorie Counter on the tab-home.html page.
+ -->
+
 <ion-view view-title="Food/Drinks Menu">
   <ion-content>
     <ion-list>
 		<div class="list list-inset">
   <div>
   <a class="item item-icon-left" href="#">
-    <i class="icon ion-coffee"></i>
+    <i class="icon ion-coffee"></i><!-- Sub-heading and appropriate ionicicon -->
     Breakfast
-  </a>
+  </a><!-- ng-repeat angular directive to loop over food objects and filter by property 'isBreakfastCat: true'
+           which will return only objects where this property is set to true. Then display in expression below  -->
   <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isBreakfastCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
-        <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
-        <h2>{{food.name | uppercase}}</h2>
+        <img ng-src="{{food.icon}}" style="width: 32px; height: 32px"><!-- Sub-heading and appropriate ionicicon -->
+        <h2>{{food.name | uppercase}}</h2><!-- Expression to display objects fetched above - display only name property
+											   and pipe(filter) to uppercase -->
         
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <i class="icon ion-chevron-right icon-accessory"></i><!-- Right icon to go to href="#/tab/foods/{{food.id}} which is selected objected displayed on food-list.html page -->
   </div>
   
   <div>
     <a class="item item-icon-left" href="#">
-    <i class="icon ion-pizza"></i>
+    <i class="icon ion-pizza"></i><!-- Sub-heading and appropriate ionicicon -->
     Lunch
   </a>
+  <!-- ng-repeat angular directive to loop over food objects and filter by property 'isLunchCat: true'
+           which will return only objects where this property is set to true. Then display in expression below  -->
   <ion-item class="item-remove-animate item-avatar item-icon-right"  ng-repeat="food in foods | filter : {isLunchCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
         <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
-        <h2>{{food.name | uppercase}}</h2>
+        <h2>{{food.name | uppercase}}</h2><!-- Expression to display objects fetched above - display only name property
+											   and pipe(filter) to uppercase -->
         
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <i class="icon ion-chevron-right icon-accessory"></i><!-- Right icon to go to href="#/tab/foods/{{food.id}} which is selected objected displayed on food-list.html page -->
 		
 		</div>
 <div>
   <a class="item item-icon-left" href="#">
-    <i class="icon ion-ios-nutrition"></i>
+    <i class="icon ion-android-restaurant"></i><!-- Sub-heading and appropriate ionicicon -->
 	
     Dinner
   </a>
-
+  <!-- ng-repeat angular directive to loop over food objects and filter by property 'isDinnerCat: true'
+           which will return only objects where this property is set to true. Then display in expression below  -->
   <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isDinnerCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
         <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
-        <h2>{{food.name | uppercase}}</h2>
+        <h2>{{food.name | uppercase}}</h2><!-- Expression to display objects fetched above - display only name property
+											   and pipe(filter) to uppercase -->
         
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <i class="icon ion-chevron-right icon-accessory"></i><!-- Right icon to go to href="#/tab/foods/{{food.id}} which is selected objected displayed on food-list.html page -->
+		
 		
 		</div>
   
   <div>
   
   <a class="item item-icon-left" href="#">
-    <i class="icon ion-icecream"></i>
+    <i class="icon ion-icecream"></i><!-- Sub-heading and appropriate ionicicon -->
     Snack
     
   </a>
-  
+   <!-- ng-repeat angular directive to loop over food objects and filter by property 'isSnackCat: true'
+           which will return only objects where this property is set to true. Then display in expression below  -->
   <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isSnackCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
         <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
-        <h2>{{food.name | uppercase}}</h2>
+        <h2>{{food.name | uppercase}}</h2><!-- Expression to display objects fetched above - display only name property
+											   and pipe(filter) to uppercase -->
         
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <i class="icon ion-chevron-right icon-accessory"></i><!-- Right icon to go to href="#/tab/foods/{{food.id}} which is selected objected displayed on food-list.html page -->
+		
+		
 
 </div>
 
@@ -61,16 +78,19 @@
 <div>
   
   <a class="item item-icon-left" href="#">
-    <i class="icon ion-wineglass"></i>
+    <i class="icon ion-wineglass"></i><!-- Sub-heading and appropriate ionicicon -->
     Drinks
     
   </a>
-  
+   <!-- ng-repeat angular directive to loop over food objects and filter by property 'isDrinkCat: true'
+           which will return only objects where this property is set to true. Then display in expression below  -->
   <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isDrinkCat: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
         <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
-        <h2>{{food.name | uppercase}}</h2>
+        <h2>{{food.name | uppercase}}</h2><!-- Expression to display objects fetched above - display only name property
+											   and pipe(filter) to uppercase -->
         
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <i class="icon ion-chevron-right icon-accessory"></i><!-- Right icon to go to href="#/tab/foods/{{food.id}} which is selected objected displayed on food-list.html page -->
+		
 
 </div>
 

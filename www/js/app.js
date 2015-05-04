@@ -66,6 +66,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.data'])
         }
       }
     })
+	
+	//Activity directives never called as had to discard pages due to unknown error
 	.state('tab.activity', {
       url: '/activity',
       views: {
@@ -75,7 +77,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.data'])
         }
       }
     })
-	
+	//same for this state change
 	.state('tab.activity-list', {
       url: '/foods/:foodId',
       views: {
@@ -86,7 +88,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.data'])
       }
     })
 	
-
+//directive for reset page
   .state('tab.reset', {
     url: '/reset',
     views: {

@@ -1,22 +1,28 @@
 <!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
+  This template loads for the 'tab.activity-list' state (app.js)
+  'food' is a $scope variable created in the ActivityCtrl controller (controllers.js)
+  The ActivityCtrl pulls data from the data service model (data.js)
+  The data service returns an array of food objects (data)
 -->
-<ion-view view-title="{{food.name}}">
+<ion-view view-title="{{food.name}}"><!-- Title taken from name of object selected on tab-activity.html page -->
   <ion-content class="padding">
   <div class="list card">
+  	<!-- ***This is where I intended to add selected Activity object to decrement 
+	        Calorie Counter on tab-home.html but keep getting NaN error! ***  
+	<button class="button button-assertive" onclick="incDec('-{{food.calories}}')">
+  button-dark
+</button>-->
 
   <div class="item item-avatar">
     <img src="{{food.icon}}">
-    <h2>BurnBaby Calories Score:</h2><h1>{{food.calories}}</h1>
+    <h2>BurnBaby Calories Score:</h2><h1>{{food.calories}}</h1><!-- Ionic card to display activity object & calories burned value -->
+		
   </div>
 
   <div class="item item-body">
-    <img class="full-image" src="{{food.image}}">
+    <img class="full-image" src="{{food.image}}"><!-- display full image property of food object within ionic card -->
     <p>
-      {{food.Description}}
+      {{food.Description}}<!-- display description property of food object -->
     </p>
   </div>
   

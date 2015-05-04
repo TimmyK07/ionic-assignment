@@ -1,17 +1,19 @@
+//this is a module to store our data objects
+
 angular.module('starter.data', [])
 
 .factory('Foods', function() {
   // Might use a resource here that returns a JSON array
 
   // food data. Food (& Activity) objects (with properties) stored in foods array
-  var foods = [{
-    id: 0,
-    name: 'Cereals',
-	image: 'img/breakfast-cereal.jpg',
-	calories: 150,
-	isBreakfastCat: true,
-    Description: 'Includes: Cornflakes, Rice-crispies, Wheatabix, Shredded-Wheat, Special-K, Porridge',
-    icon: 'img/ion-icons/plus-circled.png'
+  var foods = [{//foods array where we use to store individual food objects
+    id: 0, //object id
+    name: 'Cereals', //object name
+	image: 'img/breakfast-cereal.jpg', //object large image used on food-list.html page
+	calories: 150, //calorie value
+	isBreakfastCat: true, //state so we can display this object in Breakfast menu on tab-food.html
+    Description: 'Includes: Cornflakes, Rice-crispies, Wheatabix, Shredded-Wheat, Special-K, Porridge',//text which will be displayed in object's card on food-list.html
+    icon: 'img/ion-icons/plus-circled.png'//thumbnail used on tab-food.html page
 	
   }, {
     id: 1,
@@ -223,7 +225,7 @@ angular.module('starter.data', [])
   } ];
   
   
-
+//function looping over foods array and returning all objects by id in the foods array 
   return {
     all: function() {
       return foods;

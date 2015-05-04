@@ -1,18 +1,28 @@
+<!-- Page to display activity(food) objects in a list where uses can view details about activity and how many calories each
+exercise burned. It was intended that once an Activity object is selected that they would be able to subtract the object's 
+calorie property value which would decrement the Calorie Counter on the tab-home.html page. This page was also removed from
+tabs.hmtl as it was causing conflicts with tab-food.html page.
+ -->
+
 <ion-view view-title="Add an Activity">
   <ion-content>
     <ion-list>
 	
 	<div class="list list-inset">
   <div>
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-coffee"></i>
+  <a class="item item-icon-left" href="#"><!-- Sub-heading and appropriate ionicicon -->
+    <i class="icon ion-android-bicycle"></i>
     Activities
   </a>
+  <!-- ng-repeat angular directive to loop over food objects and filter by property 'isActivity: true'
+           which will return only objects where this property is set to true. Then display in expression below  -->
   <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="food in foods | filter : {isActivity: true}" type="item-text-wrap" href="#/tab/foods/{{food.id}}">
         <img ng-src="{{food.icon}}" style="width: 32px; height: 32px">
-        <h2>{{food.name | uppercase}}</h2>
+        <h2>{{food.name | uppercase}}</h2><!-- Expression to display objects fetched above - display only name property
+											   and pipe(filter) to uppercase -->
         
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <i class="icon ion-chevron-right icon-accessory"></i><!-- Right icon to go to href="#/tab/foods/{{food.id}} which is selected object displayed on activity-list.html page -->
+  </div>
   </div>
   
   </div>

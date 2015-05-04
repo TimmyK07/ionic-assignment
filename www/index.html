@@ -18,43 +18,21 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- your app's js -->
+    <!-- your app's js  - decided to keep all js in their own separate files for capsulation
+	     - All files can be found in 'js' directory -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/data.js"></script>
-	 <script type="text/javascript">
- 
-function incDec(plusMinus){
-                var plusMinus = parseInt(plusMinus);
-                var currentLife = parseInt(document.getElementById("Calories").innerHTML) + plusMinus;
-
-			if (currentLife > 20000)
-			{
-		    currentLife = 20000;
-            }
-            else
-            {
-                document.getElementById("Calories").innerHTML = currentLife;
-
-            }
-
-        }
-
-        function reset() {
-
-        document.getElementById("Calories").innerHTML = 0;
-
-        }
-
-    </script>
+	  <script src="js/javascript.js"></script>
 	
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter"><!-- initial angularjs directive telling browser this is an app & intialising/calling 
+                          starter controllers defined in controllers module-->
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
-    <ion-nav-bar class="bar-calm">
-      <ion-nav-back-button>
+    <ion-nav-bar class="bar-calm"><!-- Top header bar for entire app template   -->
+      <ion-nav-back-button><!-- back button for food-list.html page-->
       </ion-nav-back-button>
     </ion-nav-bar>
     <!--
